@@ -18,5 +18,15 @@ while svar == "1":
             print("Du fick ett poäng!")
         elif dator == "3":
             print("Du är sämst")
+    elif gamer == "2":
+        if dator == "3":
+            print("Du fick ett poäng!")
+        elif dator == "1":
+            print("Du är sämst")
+    elif gamer == "3":
+        if dator == "1":
+            print("Du fick ett poäng!")
+        elif dator == "2":
+            print("Du är sämst")
         
     

@@ -11,4 +11,12 @@ svar = input("[1] Spela\n[2] Exit\n")
 while svar == "1":
     gamer = input ("Välj mellan\n[1]Sten\n[2]Sax\n[3]Påse\n")
     dator = str(random.randint (1,3))
+    if gamer == dator:
+        print("Lika!")
+    elif gamer == "1":
+        if dator == "2":
+            print("Du fick ett poäng!")
+        elif dator == "3":
+            print("Du är sämst")
+        
     

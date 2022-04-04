@@ -1,7 +1,9 @@
-from random import random
+from random import choice, random
 sten = 1
 sax = 2
 påse = 3
+points = 0
+aipoints = 0
 gamer = ""
 dator = ""
 import random
@@ -12,21 +14,42 @@ while svar == "1":
     gamer = input ("Välj mellan\n[1]Sten\n[2]Sax\n[3]Påse\n")
     dator = str(random.randint (1,3))
     if gamer == dator:
-        print("Lika!")
+        print(f"Lika! Du har fortfarande {points} poäng och datorn {aipoints} poäng.")
     elif gamer == "1":
         if dator == "2":
-            print("Du fick ett poäng!")
+            points += 1
+            print(f"Du fick ett poäng! Du har {points} poäng.")
+            print(f"Datorn har fortfarande {aipoints} poäng.")
         elif dator == "3":
-            print("Du är sämst")
+            aipoints += 1
+            print(f"Du är sämst, du har fortfarande {points} poäng.")
+            print(f"Ser du vad du har gjort? Datorn har nu {aipoints} poäng.")
     elif gamer == "2":
         if dator == "3":
-            print("Du fick ett poäng!")
+            points += 1
+            print(f"Du fick ett poäng! Du har {points} poäng.")
+            print(f"Datorn har fortfarande {aipoints} poäng.")
         elif dator == "1":
-            print("Du är sämst")
+            aipoints += 1
+            print(f"Du är sämst, du har fortfarande {points} poäng.")
+            print(f"Ser du vad du har gjort? Datorn har nu {aipoints} poäng.")
     elif gamer == "3":
         if dator == "1":
-            print("Du fick ett poäng!")
+            points += 1
+            print(f"Du fick ett poäng! Du har {points} poäng.")
+            print(f"Datorn har fortfarande {aipoints} poäng.")
         elif dator == "2":
-            print("Du är sämst")
-        
-    
+            aipoints += 1
+            print(f"Du är sämst, du har fortfarande {points} poäng.")
+            print(f"Ser du vad du har gjort? Datorn har nu {aipoints} poäng.")
+    if points == 2:
+        print("Du vann över dator jäveln 👍")
+        svar = input("Vad vill du göra?\n[1] Spela igen?\n[2] Exit?\n")
+        points -= points
+        aipoints -= aipoints
+
+    if aipoints == 2:
+        print("Du suger skitunge, datorn vann.")
+        svar = input("Vad vill du göra?\n[1] Spela igen?\n[2] Exit?\n")
+        points -= points
+        aipoints -= aipoints

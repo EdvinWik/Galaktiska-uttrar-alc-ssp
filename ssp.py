@@ -45,11 +45,11 @@ while svar == "1":
     if points == 2:
         print("Du vann över dator jäveln 👍")
         svar = input("Vad vill du göra?\n[1] Spela igen?\n[2] Exit?\n")
-        points -= points
-        aipoints -= aipoints
+        points = 0
+        aipoints = 0
 
     if aipoints == 2:
-        print("Du suger skitunge, datorn vann.")
-        svar = input("Vad vill du göra?\n[1] Spela igen?\n[2] Exit?\n")
-        points -= points
-        aipoints -= aipoints
+        print("Du suger din skitunge, datorn vann.")
+        svar = input("Vad vill du göra nu?\n[1] Spela igen?\n[2] Exit?\n")
+        points = 0
+        aipoints = 0
